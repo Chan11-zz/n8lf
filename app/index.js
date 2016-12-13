@@ -32,15 +32,9 @@ app.use(_bodyParser2.default.json());
 (0, _routes2.default)(app);
 
 app.get('*', function (req, res) {
-  console.log("sending");
   res.sendFile(_path2.default.join(__dirname, './build', 'index.html'));
 });
 
-/*
-app.get('*',(req,res)=>{
-    res.sendFile(path.join(__dirname,"index.html"));
-});
-*/
+
 app.listen(app.get('port'), function () {
-  console.log("app running at " + app.get('port'));
 });

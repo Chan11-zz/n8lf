@@ -16,7 +16,6 @@ var yelp = new _nodeYelpFusion2.default({ id: key, secret: secret });
 
 exports.default = function (term) {
     return new Promise(function (resolve, reject) {
-        console.log("in Yelp:", term);
         yelp.search("term=Bar&location=" + term).then(function (result) {
             resolve(result);
         }).catch(function (err) {

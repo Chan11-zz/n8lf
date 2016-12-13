@@ -17,31 +17,25 @@ exports.default = function (app) {
     });
 
     app.post('/search', function (req, res) {
-        console.log("got search", req.body.search);
         (0, _Yelp2.default)(req.body.search).then(function (result) {
             res.json(result);
         });
     });
 
     app.post('/eventsAdd', _validate2.default.validateRequest, function (req, res) {
-        console.log(_typeof(req.body.events));
         var events = req.body.events.split(',');
-        console.log(events);
         _db2.default.handleMongo(_db2.default.insertDoc, "events", { id: events[0], name: events[1], store_id: events[2], city: events[3].toLowerCase() });
         res.status('200').send();
     });
 
     app.post('/eventsUndo', function (req, res) {
-        console.log("events undo", req.body.events);
         var events = req.body.events.split(',');
         _db2.default.handleMongo(_db2.default.deleteDoc, "events", { id: events[0], name: events[1] });
         res.status('200').send();
     });
 
     app.post('/getEvents', function (req, res) {
-        console.log(req.body.search);
         _db2.default.handleMongo(_db2.default.findDocToArray, "events", { city: req.body.search }).then(function (result) {
-            console.log(result);
             res.json(result);
         });
     });

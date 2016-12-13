@@ -16,7 +16,6 @@ exports.default = {
         return _bcryptNodejs2.default.hashSync(password, _bcryptNodejs2.default.genSaltSync(8), null);
     },
     validPassword: function validPassword(password, a) {
-        console.log(password, a);
         return _bcryptNodejs2.default.compareSync(password, a);
     },
     setPassword: function setPassword(password) {
