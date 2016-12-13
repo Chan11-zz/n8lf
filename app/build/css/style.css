@@ -1,0 +1,180 @@
+#headerdiv{
+  height:100px;
+}
+#loginButton{
+    margin-top:10%;
+}
+
+#search-button,input{
+    display:block;
+}
+#search-button {
+    margin: 5% auto;
+    width:50%;
+    height:50px;
+}
+input{
+    border:1px solid;
+    padding:3%;
+    width:80%;
+    margin:3px auto;
+}
+#searchComponent,#login,#loginButton{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#title{
+    text-align:center;
+}
+
+.alert {
+    background-color: #f44336;
+    color: white;
+    margin:0 0 10px 1%;
+}
+.error-chip{
+    margin-left:10px;
+    color:red;
+}
+
+ul{
+    text-align:center;
+}
+
+#logo{
+  max-width:30px;
+  max-height:30px;
+}
+
+#name,#price,#rating,#divblocks,#datalis{
+  display: inline-block;
+}
+#logo{
+  margin-left: 8px;
+}
+#rating{
+    margin-left: 10px;
+}
+#datalis,.footer{
+    text-align: center;
+    font-family: Verdana;
+    font-size: 11px;
+    line-height: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+#datalis{
+  border: 1px solid black;
+  display: inline-block;
+  margin: 10px;
+  max-width: 280px;
+}
+ul{
+  padding: 0px;
+}
+
+#preview{
+    width: 280px;
+    height: 180px;
+}
+
+#lidivs{
+  background-color: #16a085;
+  color:white;
+  overflow: auto;
+}
+#header{
+  margin-top: 5px;
+}
+
+@keyframes zoomInUp {
+  from {
+    opacity: 0;
+    transform: scale3d(.1, .1, .1) translate3d(0, 1000px, 0);
+    animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+  }
+
+  60% {
+    opacity: 1;
+    transform: scale3d(.475, .475, .475) translate3d(0, -60px, 0);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+  }
+}
+
+.zoomInUp {
+  animation-name: zoomInUp;
+  animation-duration: 3s;
+  animation-fill-mode: both;
+}
+.undo{
+  background-color:red;
+  color:white;
+}
+#attendingButton{
+  background-color: #104455;
+  color:white;
+}
+#attendingButton,#goingButton,#reviewsButton,#modalClose{
+  border:0px;
+  padding:3%;
+  display:inline-block;
+  width: 100px;
+}
+#reviewsButton{
+  background-color: #A31C88;
+  color:white;
+  margin-left: 20px;
+  width: 100px;
+}
+#header,#name{
+  display:inline-block;
+}
+#nofpeople{
+      display:inline-block;
+      font-size: 23px;
+      margin-left: 20px;
+}
+#nofpeoplespan{
+  vertical-align: middle;
+}
+#smiley{
+  vertical-align: top;
+}
+#modalClose{
+  background-color:#27ae60;
+  margin-left:6px;
+  vertical-align: super;
+  display:inline-block;
+}
+#reviewsTitle{
+  display:inline-block;
+}
+
+.material-icons.md-48 {
+  font-size: 48px;
+  margin-left:50px;
+  text-align: center;
+}
+#title-icons{
+  text-align:center;
+  margin-left: -50px;
+}
+
+#bar-icon{
+  color:#16a085;
+}
+#restaurant-icon{
+  color:#2980b9;
+}
+#group-icon{
+  color:#c0392b;
+}
+.footer{
+  text-align:center;
+}
+button{
+  cursor:pointer;
+}
