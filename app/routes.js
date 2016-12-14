@@ -23,13 +23,13 @@ exports.default = function (app) {
     app.post('/eventsAdd', _validate2.default.validateRequest, function (req, res) {
         var events = req.body.events.split(',');
         _db2.default.handleMongo(_db2.default.insertDoc, "events", { id: events[0], name: events[1], store_id: events[2], city: events[3].toLowerCase() });
-        res.status('200').send();
+        res.json({ error: false });
     });
 
     app.post('/eventsUndo', function (req, res) {
         var events = req.body.events.split(',');
         _db2.default.handleMongo(_db2.default.deleteDoc, "events", { id: events[0], name: events[1] });
-        res.status('200').send();
+        res.json({ error: false });
     });
 
     app.post('/getEvents', function (req, res) {

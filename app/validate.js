@@ -66,7 +66,7 @@ exports.default = {
         if (!decoded) res.json({ error: "not authorized" });
         _db2.default.handleMongo(_db2.default.findDoc, "users", { "id": decoded.id }).then(function (usersResult) {
             if (!usersResult) res.json({ error: "not authorized" });
-            if (usersResult["email"] == decoded.username && usersResult["id"] == decoded.id) res.json({ error: false });
+            if (usersResult["email"] == decoded.username && usersResult["id"] == decoded.id) next();
         });
     }
 
