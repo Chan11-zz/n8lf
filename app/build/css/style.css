@@ -9,15 +9,18 @@
     display:block;
 }
 #search-button {
-    margin: 5% auto;
-    width:50%;
+    margin: 2% auto;
+    width:40%;
     height:50px;
 }
 input{
     border:1px solid;
-    padding:3%;
-    width:80%;
+    padding:1%;
+    width:60%;
     margin:3px auto;
+}
+#page-content{
+  display:block;
 }
 #searchComponent,#login,#loginButton{
     margin-left: auto;

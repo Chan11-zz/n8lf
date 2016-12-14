@@ -1,10 +1,10 @@
-"use strict";
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _nodeYelpFusion = require("node-yelp-fusion");
+var _nodeYelpFusion = require('node-yelp-fusion');
 
 var _nodeYelpFusion2 = _interopRequireDefault(_nodeYelpFusion);
 
@@ -16,7 +16,7 @@ var yelp = new _nodeYelpFusion2.default({ id: key, secret: secret });
 
 exports.default = function (term) {
     return new Promise(function (resolve, reject) {
-        yelp.search("term=Bar&location=" + term).then(function (result) {
+        yelp.search('term=Bar&location=' + term).then(function (result) {
             resolve(result);
         }).catch(function (err) {
             reject(err);

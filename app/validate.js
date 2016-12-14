@@ -34,7 +34,7 @@ exports.default = {
         }
 
         if (!validateEmail(req.body.users.email)) {
-            errors.email = "This email is not valid email";
+            errors.email = "This email is not valid";
             bool = 1;
         }
 
@@ -68,7 +68,6 @@ exports.default = {
             if (!usersResult) res.json({ error: "not authorized" });
             if (usersResult["email"] == decoded.username && usersResult["id"] == decoded.id) res.json({ error: false });
         });
-
     }
 
 };
