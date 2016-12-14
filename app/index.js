@@ -1,6 +1,6 @@
 'use strict';
 
-require("babel/register");
+require('babel-polyfill');
 
 var _express = require('express');
 
@@ -27,7 +27,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 _db2.default.connectMongo();
 
 var app = (0, _express2.default)();
-app.set('port',process.env.PORT);
+app.set('port', process.env.PORT);
 app.use(_express2.default.static(_path2.default.join(__dirname, './build')));
 app.use(_bodyParser2.default.json());
 
