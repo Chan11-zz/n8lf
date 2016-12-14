@@ -7,11 +7,11 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = function (app) {
 
     app.post('/signup', _validate2.default.validateSignUp, function (req, res) {
-        _db_actions2.default.insertUser(req, res);
+        _db_actions.insertUser(req, res);
     });
 
     app.post('/login', _validate2.default.validateLogin, function (req, res) {
-        _db_actions2.default.findUser(req, res);
+        _db_actions.findUser(req, res);
     });
 
     app.post('/search', function (req, res) {
@@ -22,18 +22,18 @@ exports.default = function (app) {
 
     app.post('/eventsAdd', _validate2.default.validateRequest, function (req, res) {
         var events = req.body.events.split(',');
-        _db2.default.handleMongo(_db2.default.insertDoc, "events", { id: events[0], name: events[1], store_id: events[2], city: events[3].toLowerCase() });
+        _db.handleMongo(_db2.insertDoc, "events", { id: events[0], name: events[1], store_id: events[2], city: events[3].toLowerCase() });
         res.status('200').send();
     });
 
     app.post('/eventsUndo', function (req, res) {
         var events = req.body.events.split(',');
-        _db2.default.handleMongo(_db2.default.deleteDoc, "events", { id: events[0], name: events[1] });
+        _db.handleMongo(_db.deleteDoc, "events", { id: events[0], name: events[1] });
         res.status('200').send();
     });
 
     app.post('/getEvents', function (req, res) {
-        _db2.default.handleMongo(_db2.default.findDocToArray, "events", { city: req.body.search }).then(function (result) {
+        _db.handleMongo(_db.findDocToArray, "events", { city: req.body.search }).then(function (result) {
             res.json(result);
         });
     });
